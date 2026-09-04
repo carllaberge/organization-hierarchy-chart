@@ -1,0 +1,26 @@
+{
+    "visual": {
+        "name": "organizationHierarchyChart",
+        "displayName": "Organization Hierarchy Chart",
+        "guid": "ecceb6a3750c42efb9bb3336fd028c02",
+        "visualClassName": "Visual",
+        "version": "1.0.0.0",
+        "description": "Interactive hierarchy chart for displaying organizational structures and other parent-child relationships, with configurable node formatting, rich text, zoom and pan, expand and collapse, custom roots, tooltips, and refresh information.",
+        "supportUrl": "",
+        "gitHubUrl": ""
+    },
+    "apiVersion": "5.11.1",
+    "author": {
+        "name": "Carl Laberge",
+        "email": "carl.laberge@pmprb-cepmb.gc.ca"
+    },
+    "assets": {
+        "icon": "assets/icon.png"
+    },
+    "externalJS": null,
+    "style": "style/visual.less",
+    "capabilities": "capabilities.json",
+    "dependencies": null,
+    "stringResources": [],
+    "version": "1.0.0.0"
+}

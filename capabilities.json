@@ -1,0 +1,260 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "ID",
+            "name": "id",
+            "kind": "Grouping",
+            "description": "Unique identifier for each hierarchy node"
+        },
+        {
+            "displayName": "Parent",
+            "name": "parent",
+            "kind": "Grouping",
+            "description": "Parent identifier for each hierarchy node"
+        },
+        {
+            "displayName": "Display",
+            "name": "display",
+            "kind": "Grouping",
+            "description": "Text displayed inside the hierarchy node. Line breaks are supported."
+        },
+        {
+            "displayName": "Tooltip",
+            "name": "tooltip",
+            "kind": "Grouping",
+            "description": "Optional information displayed in the tooltip"
+        },
+        {
+            "name": "refreshDate",
+            "displayName": "Last refresh",
+            "kind": "Measure",
+            "description": "Last refresh date and time"
+        }
+    ],
+
+    "objects": {
+        "node": {
+            "displayName": "Node",
+            "properties": {
+                "backgroundColor": {
+                    "displayName": "Background color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "borderColor": {
+                    "displayName": "Border color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "fontColor": {
+                    "displayName": "Font color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "fontSize": {
+                    "displayName": "Font size",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                },
+                "boxShape": {
+                    "displayName": "Box shape",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "rounded",
+                                "displayName": "Rounded rectangle"
+                            },
+                            {
+                                "value": "rectangle",
+                                "displayName": "Rectangle"
+                            },
+                            {
+                                "value": "ellipse",
+                                "displayName": "Ellipse"
+                            }
+                        ]
+                    }
+                },
+                "useLevelColors": {
+                    "displayName": "Use level colors",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "level0Color": {
+                    "displayName": "Level 0 color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "level1Color": {
+                    "displayName": "Level 1 color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "level2Color": {
+                    "displayName": "Level 2 color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "level3Color": {
+                    "displayName": "Level 3 color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "level4Color": {
+                    "displayName": "Level 4 color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "connectionColor": {
+                    "displayName": "Connection line color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "connectionWidth": {
+                    "displayName": "Connection line width",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                },
+                "connectionStyle": {
+                    "displayName": "Connection line style",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "value": "solid",
+                                "displayName": "Solid"
+                            },
+                            {
+                                "value": "dashed",
+                                "displayName": "Dashed"
+                            },
+                            {
+                                "value": "dotted",
+                                "displayName": "Dotted"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "header": {
+            "displayName": "Chart Header",
+            "properties": {
+                "chartTitle": {
+                    "displayName": "Chart title",
+                    "type": {
+                        "text": true
+                    }
+                },
+                "showLastUpdated": {
+                    "displayName": "Show last updated",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "lastUpdatedLabel": {
+                    "displayName": "Last updated label",
+                    "type": {
+                        "text": true
+                    }
+                }
+            }
+        }
+    },
+
+    "dataViewMappings": [
+        {
+            "categorical": {
+                "categories": {
+                    "select": [
+                        {
+                            "for": {
+                                "in": "id"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "parent"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "display"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "tooltip"
+                            }
+                        }
+                    ]
+                },
+                "values": {
+                    "select": [
+                        {
+                            "for": {
+                                "in": "refreshDate"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+
+    "supportsHighlight": true,
+
+    "privileges": []
+
+}
